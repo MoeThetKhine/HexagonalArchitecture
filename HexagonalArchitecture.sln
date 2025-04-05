@@ -3,8 +3,83 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{46E21F19-BCC7-4CCF-B989-60A3E32C8F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.Domain", "HexagonalArchitecture.Domain\HexagonalArchitecture.Domain.csproj", "{5B346BF7-5EF5-4C90-86D4-0C68B93394F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.Application", "HexagonalArchitecture.Application\HexagonalArchitecture.Application.csproj", "{69E923A1-FEF0-4106-90FD-322B331C726A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.Infrastructure", "HexagonalArchitecture.Infrastructure\HexagonalArchitecture.Infrastructure.csproj", "{61C5BF8C-3C00-47DF-A2A0-1189D57173A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.API", "HexagonalArchitecture.API\HexagonalArchitecture.API.csproj", "{689BF59B-B388-40A0-AAEB-EC130F7913DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{280350A0-43AB-446F-97AE-7F90B8C21154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.DbService", "HexagonalArchitecture.DbService\HexagonalArchitecture.DbService.csproj", "{5301A3A2-FDF3-4CA2-8404-00B41BA0432F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.DTOs", "HexagonalArchitecture.DTOs\HexagonalArchitecture.DTOs.csproj", "{B429CAAE-509F-4FDC-BA0D-DD12552BB324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.Extensions", "HexagonalArchitecture.Extensions\HexagonalArchitecture.Extensions.csproj", "{5017328E-BAEF-4F7C-A5B1-FDE304B9289F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.Shared", "HexagonalArchitecture.Shared\HexagonalArchitecture.Shared.csproj", "{80A16849-3D41-4257-BCDC-854DA71810DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalArchitecture.Utils", "HexagonalArchitecture.Utils\HexagonalArchitecture.Utils.csproj", "{B681289B-3CAC-4139-957D-C8C46851BF4C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B346BF7-5EF5-4C90-86D4-0C68B93394F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B346BF7-5EF5-4C90-86D4-0C68B93394F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B346BF7-5EF5-4C90-86D4-0C68B93394F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B346BF7-5EF5-4C90-86D4-0C68B93394F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E923A1-FEF0-4106-90FD-322B331C726A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E923A1-FEF0-4106-90FD-322B331C726A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E923A1-FEF0-4106-90FD-322B331C726A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E923A1-FEF0-4106-90FD-322B331C726A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C5BF8C-3C00-47DF-A2A0-1189D57173A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C5BF8C-3C00-47DF-A2A0-1189D57173A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C5BF8C-3C00-47DF-A2A0-1189D57173A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C5BF8C-3C00-47DF-A2A0-1189D57173A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689BF59B-B388-40A0-AAEB-EC130F7913DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689BF59B-B388-40A0-AAEB-EC130F7913DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689BF59B-B388-40A0-AAEB-EC130F7913DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689BF59B-B388-40A0-AAEB-EC130F7913DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5301A3A2-FDF3-4CA2-8404-00B41BA0432F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5301A3A2-FDF3-4CA2-8404-00B41BA0432F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5301A3A2-FDF3-4CA2-8404-00B41BA0432F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5301A3A2-FDF3-4CA2-8404-00B41BA0432F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B429CAAE-509F-4FDC-BA0D-DD12552BB324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B429CAAE-509F-4FDC-BA0D-DD12552BB324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B429CAAE-509F-4FDC-BA0D-DD12552BB324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B429CAAE-509F-4FDC-BA0D-DD12552BB324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5017328E-BAEF-4F7C-A5B1-FDE304B9289F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5017328E-BAEF-4F7C-A5B1-FDE304B9289F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5017328E-BAEF-4F7C-A5B1-FDE304B9289F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5017328E-BAEF-4F7C-A5B1-FDE304B9289F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A16849-3D41-4257-BCDC-854DA71810DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A16849-3D41-4257-BCDC-854DA71810DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A16849-3D41-4257-BCDC-854DA71810DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A16849-3D41-4257-BCDC-854DA71810DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B681289B-3CAC-4139-957D-C8C46851BF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B681289B-3CAC-4139-957D-C8C46851BF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B681289B-3CAC-4139-957D-C8C46851BF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B681289B-3CAC-4139-957D-C8C46851BF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B346BF7-5EF5-4C90-86D4-0C68B93394F6} = {46E21F19-BCC7-4CCF-B989-60A3E32C8F8A}
+		{69E923A1-FEF0-4106-90FD-322B331C726A} = {46E21F19-BCC7-4CCF-B989-60A3E32C8F8A}
+		{61C5BF8C-3C00-47DF-A2A0-1189D57173A0} = {46E21F19-BCC7-4CCF-B989-60A3E32C8F8A}
+		{689BF59B-B388-40A0-AAEB-EC130F7913DA} = {46E21F19-BCC7-4CCF-B989-60A3E32C8F8A}
+		{5301A3A2-FDF3-4CA2-8404-00B41BA0432F} = {280350A0-43AB-446F-97AE-7F90B8C21154}
+		{B429CAAE-509F-4FDC-BA0D-DD12552BB324} = {280350A0-43AB-446F-97AE-7F90B8C21154}
+		{5017328E-BAEF-4F7C-A5B1-FDE304B9289F} = {280350A0-43AB-446F-97AE-7F90B8C21154}
+		{80A16849-3D41-4257-BCDC-854DA71810DA} = {280350A0-43AB-446F-97AE-7F90B8C21154}
+		{B681289B-3CAC-4139-957D-C8C46851BF4C} = {280350A0-43AB-446F-97AE-7F90B8C21154}
 	EndGlobalSection
 EndGlobal
