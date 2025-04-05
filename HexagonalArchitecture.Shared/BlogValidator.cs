@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Shared
+﻿namespace HexagonalArchitecture.Shared;
+
+public class BlogValidator
 {
-	public class BlogValidator
-	{
-	}
 }
