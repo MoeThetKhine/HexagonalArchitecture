@@ -1,5 +1,9 @@
-﻿namespace HexagonalArchitecture.DTOs.Features.Blog;
+﻿using HexagonalArchitecture.DTOs.PageSetting;
 
-internal class BlogListModel
+namespace HexagonalArchitecture.DTOs.Features.Blog;
+
+public class BlogListModel
 {
+	public IEnumerable<BlogModel> DataLst { get; set; }
+	public PageSettingModel PageSetting { get; set; }
 }
