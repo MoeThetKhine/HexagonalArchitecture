@@ -1,5 +1,4 @@
-﻿
-namespace HexagonalArchitecture.DTOs.Features.Blog;
+﻿namespace HexagonalArchitecture.DTOs.Features.Blog;
 
 #region BlogListModel
 
