@@ -1,5 +1,4 @@
-﻿global using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace HexagonalArchitecture.DbService.AppDbContextModels;
 
 public partial class AppDbContext : DbContext
