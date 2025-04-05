@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HexagonalArchitecture.DbService\HexagonalArchitecture.DbService.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.DTOs\HexagonalArchitecture.DTOs.csproj" />
+  </ItemGroup>
+
 </Project>
