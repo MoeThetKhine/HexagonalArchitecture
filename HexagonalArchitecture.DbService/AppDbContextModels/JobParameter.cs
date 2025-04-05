@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace HexagonalArchitecture.DbService.AppDbContextModels;
+﻿namespace HexagonalArchitecture.DbService.AppDbContextModels;
 
 public partial class JobParameter
 {
