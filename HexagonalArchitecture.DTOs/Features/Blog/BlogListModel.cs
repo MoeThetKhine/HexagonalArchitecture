@@ -1,5 +1,4 @@
-﻿using HexagonalArchitecture.DTOs.PageSetting;
-
+﻿
 namespace HexagonalArchitecture.DTOs.Features.Blog;
 
 #region BlogListModel

@@ -1,1 +1,1 @@
-﻿
+﻿global using HexagonalArchitecture.DTOs.PageSetting;
