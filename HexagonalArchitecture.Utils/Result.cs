@@ -1,5 +1,5 @@
 ﻿namespace HexagonalArchitecture.Utils;
 
-internal class Result
+public class Result<T>
 {
 }
