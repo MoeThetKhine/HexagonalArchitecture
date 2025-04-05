@@ -21,6 +21,8 @@ namespace HexagonalArchitecture.Extensions
 
 		#endregion
 
+		#region ToEntity
+
 		public static TblBlog ToEntity(this BlogRequestModel model)
 		{
 			return new TblBlog
@@ -31,6 +33,7 @@ namespace HexagonalArchitecture.Extensions
 			};
 		}
 
+		#endregion
 
 	}
 }
