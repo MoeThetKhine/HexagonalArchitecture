@@ -1,5 +1,7 @@
 ﻿namespace HexagonalArchitecture.Utils;
 
+#region EnumStatusCode
+
 public enum EnumStatusCode
 {
 	none,
@@ -12,3 +14,5 @@ public enum EnumStatusCode
 	Locked = 423,
 	InternalServerError = 500
 }
+
+#endregion
