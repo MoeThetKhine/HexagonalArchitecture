@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.DTOs.Features.Blog
+﻿namespace HexagonalArchitecture.DTOs.Features.Blog;
+
+internal class BlogListModel
 {
-	internal class BlogListModel
-	{
-	}
 }
