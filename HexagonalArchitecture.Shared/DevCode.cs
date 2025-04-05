@@ -1,6 +1,6 @@
 ﻿namespace HexagonalArchitecture.Shared
 {
-	internal class DevCode
+	public static class DevCode
 	{
 	}
 }
