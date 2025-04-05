@@ -1,18 +1,21 @@
-﻿namespace HexagonalArchitecture.DbService.AppDbContextModels;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HexagonalArchitecture.DbService.AppDbContextModels;
 
 #region TblBlog
 
 public partial class TblBlog
 {
-    public long BlogId { get; set; }
+	[Key]
+	public long BlogId { get; set; }
 
-    public string BlogTitle { get; set; } = null!;
+	public string BlogTitle { get; set; } = null!;
 
-    public string BlogAuthor { get; set; } = null!;
+	public string BlogAuthor { get; set; } = null!;
 
-    public string BlogContent { get; set; } = null!;
+	public string BlogContent { get; set; } = null!;
 
-    public bool? DeleteFlag { get; set; }
+	public bool DeleteFlag { get; set; }
 }
 
 #endregion
