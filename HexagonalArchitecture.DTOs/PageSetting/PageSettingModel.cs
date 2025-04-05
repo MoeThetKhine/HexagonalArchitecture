@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.DTOs.PageSetting
+﻿namespace HexagonalArchitecture.DTOs.PageSetting;
+
+public class PageSettingModel
 {
-	public class PageSettingModel
-	{
-	}
 }
