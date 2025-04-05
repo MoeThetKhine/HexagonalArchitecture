@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace HexagonalArchitecture.Shared;
+﻿namespace HexagonalArchitecture.Shared;
 
 #region DevCode
 
