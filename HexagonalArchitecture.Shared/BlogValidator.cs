@@ -1,7 +1,4 @@
-﻿using FluentValidation;
-using HexagonalArchitecture.DTOs.Features.Blog;
-
-namespace HexagonalArchitecture.Shared;
+﻿namespace HexagonalArchitecture.Shared;
 
 public class BlogValidator : AbstractValidator<BlogRequestModel>
 {
