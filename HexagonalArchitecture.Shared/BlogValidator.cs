@@ -1,6 +1,6 @@
 ﻿namespace HexagonalArchitecture.Shared
 {
-	internal class BlogValidator
+	public class BlogValidator
 	{
 	}
 }
