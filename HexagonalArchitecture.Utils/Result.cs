@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Utils
+﻿namespace HexagonalArchitecture.Utils;
+
+internal class Result
 {
-	internal class Result
-	{
-	}
 }
