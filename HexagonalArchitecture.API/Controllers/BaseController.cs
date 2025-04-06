@@ -1,7 +1,4 @@
-﻿using HexagonalArchitecture.Shared;
-using Microsoft.AspNetCore.Mvc;
-
-namespace HexagonalArchitecture.API.Controllers;
+﻿namespace HexagonalArchitecture.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
