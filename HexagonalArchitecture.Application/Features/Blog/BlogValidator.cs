@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Application.Features.Blog
+﻿namespace HexagonalArchitecture.Application.Features.Blog;
+
+public class BlogValidator
 {
-	internal class BlogValidator
-	{
-	}
 }
