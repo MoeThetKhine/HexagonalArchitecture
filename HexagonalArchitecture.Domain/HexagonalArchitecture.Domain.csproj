@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HexagonalArchitecture.DTOs\HexagonalArchitecture.DTOs.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Utils\HexagonalArchitecture.Utils.csproj" />
+  </ItemGroup>
+
 </Project>
