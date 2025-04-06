@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Infrastructure.Features.Blog
+﻿namespace HexagonalArchitecture.Infrastructure.Features.Blog;
+
+internal class BlogAdapter
 {
-	internal class BlogAdapter
-	{
-	}
 }
