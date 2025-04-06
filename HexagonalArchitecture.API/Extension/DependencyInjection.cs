@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.API.Extension
+﻿namespace HexagonalArchitecture.API.Extension;
+
+public class DependencyInjection
 {
-	public class DependencyInjection
-	{
-	}
 }
