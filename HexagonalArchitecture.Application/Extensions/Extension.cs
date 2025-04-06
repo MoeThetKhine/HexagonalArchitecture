@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Application.Extensions
+﻿namespace HexagonalArchitecture.Application.Extensions;
+
+public class Extension
 {
-	internal class Extension
-	{
-	}
 }
