@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HexagonalArchitecture.DbService\HexagonalArchitecture.DbService.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Domain\HexagonalArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.DTOs\HexagonalArchitecture.DTOs.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Extensions\HexagonalArchitecture.Extensions.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Shared\HexagonalArchitecture.Shared.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Utils\HexagonalArchitecture.Utils.csproj" />
+  </ItemGroup>
+
 </Project>
