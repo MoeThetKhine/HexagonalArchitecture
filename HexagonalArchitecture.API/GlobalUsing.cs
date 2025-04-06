@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.API
+﻿namespace HexagonalArchitecture.API;
+
+public class GlobalUsing
 {
-	public class GlobalUsing
-	{
-	}
 }
