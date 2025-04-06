@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Application.Features.Blog.CreateBlog
+﻿namespace HexagonalArchitecture.Application.Features.Blog.CreateBlog;
+
+internal class CreateBlogCommandHandler
 {
-	internal class CreateBlogCommandHandler
-	{
-	}
 }
