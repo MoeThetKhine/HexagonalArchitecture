@@ -1,5 +1,5 @@
 ﻿namespace HexagonalArchitecture.Domain.Features.Blog;
 
-internal class Tbl_Blog
+public class Tbl_Blog
 {
 }
