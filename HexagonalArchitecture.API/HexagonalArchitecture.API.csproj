@@ -14,4 +14,11 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HexagonalArchitecture.Application\HexagonalArchitecture.Application.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.DbService\HexagonalArchitecture.DbService.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Infrastructure\HexagonalArchitecture.Infrastructure.csproj" />
+    <ProjectReference Include="..\HexagonalArchitecture.Shared\HexagonalArchitecture.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
