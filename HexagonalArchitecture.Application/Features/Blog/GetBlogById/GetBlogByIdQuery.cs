@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogById
+﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogById;
+
+public class GetBlogByIdQuery
 {
-	public class GetBlogByIdQuery
-	{
-	}
 }
