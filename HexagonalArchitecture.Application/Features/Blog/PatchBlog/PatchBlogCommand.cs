@@ -1,5 +1,5 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.PatchBlog;
 
-internal class PatchBlogCommand
+public class PatchBlogCommand
 {
 }
