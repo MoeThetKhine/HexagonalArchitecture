@@ -1,6 +1,5 @@
-﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList
+﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
+
+internal class GetBlogListQuery
 {
-	internal class GetBlogListQuery
-	{
-	}
 }
