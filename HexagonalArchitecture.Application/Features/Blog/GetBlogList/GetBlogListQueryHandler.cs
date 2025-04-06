@@ -1,5 +1,5 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
 
-internal class GetBlogListQueryHandler
+public class GetBlogListQueryHandler
 {
 }
