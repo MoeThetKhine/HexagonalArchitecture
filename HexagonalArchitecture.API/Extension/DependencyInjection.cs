@@ -1,4 +1,6 @@
 ﻿using HexagonalArchitecture.DbService.AppDbContextModels;
+using HexagonalArchitecture.Domain.Features.Blog;
+using HexagonalArchitecture.Infrastructure.Features.Blog;
 using Microsoft.EntityFrameworkCore;
 
 namespace HexagonalArchitecture.API.Extension;
@@ -17,5 +19,10 @@ public static class DependencyInjection
 			ServiceLifetime.Transient
 			);
 		return services;
+	}
+
+	public static IServiceCollection AddRepositoryServices(this  IServiceCollection services)
+	{
+		return services.AddScoped<IBlogPort,BlogAdapter>();
 	}
 }
