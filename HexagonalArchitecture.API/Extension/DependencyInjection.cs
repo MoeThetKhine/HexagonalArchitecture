@@ -1,5 +1,21 @@
-﻿namespace HexagonalArchitecture.API.Extension;
+﻿using HexagonalArchitecture.DbService.AppDbContextModels;
+using Microsoft.EntityFrameworkCore;
 
-public class DependencyInjection
+namespace HexagonalArchitecture.API.Extension;
+
+public static class DependencyInjection
 {
+	public static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
+	{
+		builder.Services.AddDbContext<AppDbContext>(
+			opt =>
+			{
+				opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+				opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+			},
+			ServiceLifetime.Transient,
+			ServiceLifetime.Transient
+			);
+		return services;
+	}
 }
