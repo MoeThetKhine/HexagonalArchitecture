@@ -1,9 +1,4 @@
-﻿using HexagonalArchitecture.DbService.AppDbContextModels;
-using HexagonalArchitecture.Domain.Features.Blog;
-using HexagonalArchitecture.Infrastructure.Features.Blog;
-using Microsoft.EntityFrameworkCore;
-
-namespace HexagonalArchitecture.API.Extension;
+﻿namespace HexagonalArchitecture.API.Extension;
 
 public static class DependencyInjection
 {
