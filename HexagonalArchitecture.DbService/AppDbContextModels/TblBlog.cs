@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace HexagonalArchitecture.DbService.AppDbContextModels;
+﻿namespace HexagonalArchitecture.DbService.AppDbContextModels;
 
 #region TblBlog
 
