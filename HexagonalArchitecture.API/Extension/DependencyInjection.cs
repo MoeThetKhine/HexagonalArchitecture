@@ -7,7 +7,7 @@ namespace HexagonalArchitecture.API.Extension;
 
 public static class DependencyInjection
 {
-	public static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
+	private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
 	{
 		builder.Services.AddDbContext<AppDbContext>(
 			opt =>
@@ -21,8 +21,16 @@ public static class DependencyInjection
 		return services;
 	}
 
-	public static IServiceCollection AddRepositoryServices(this  IServiceCollection services)
+	private static IServiceCollection AddRepositoryServices(this  IServiceCollection services)
 	{
 		return services.AddScoped<IBlogPort,BlogAdapter>();
 	}
+
+	public static IServiceCollection AddDependencyInjection(this IServiceCollection services, WebApplicationBuilder builder)
+	{
+		services.AddDbContextService(builder)
+				.AddRepositoryServices();
+
+		return services;
+	} 
 }
