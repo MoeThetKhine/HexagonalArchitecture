@@ -1,5 +1,7 @@
-﻿namespace HexagonalArchitecture.Infrastructure.Features.Blog;
+﻿using HexagonalArchitecture.Domain.Features.Blog;
 
-public class BlogAdapter
+namespace HexagonalArchitecture.Infrastructure.Features.Blog;
+
+public class BlogAdapter : IBlogPort
 {
 }
