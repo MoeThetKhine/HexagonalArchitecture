@@ -1,7 +1,4 @@
-﻿using HexagonalArchitecture.DTOs.Features.Blog;
-using HexagonalArchitecture.Utils;
-
-namespace HexagonalArchitecture.Domain.Features.Blog;
+﻿namespace HexagonalArchitecture.Domain.Features.Blog;
 
 public interface IBlogPort
 {
