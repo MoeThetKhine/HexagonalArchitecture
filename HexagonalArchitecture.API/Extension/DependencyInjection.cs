@@ -7,6 +7,9 @@ namespace HexagonalArchitecture.API.Extension;
 
 public static class DependencyInjection
 {
+
+	#region AddDbContextService
+
 	private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
 	{
 		builder.Services.AddDbContext<AppDbContext>(
@@ -20,6 +23,8 @@ public static class DependencyInjection
 			);
 		return services;
 	}
+
+	#endregion
 
 	private static IServiceCollection AddRepositoryServices(this  IServiceCollection services)
 	{
