@@ -1,4 +1,3 @@
-using HexagonalArchitecture.API.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
 
