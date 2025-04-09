@@ -1,12 +1,4 @@
-﻿using HexagonalArchitecture.DbService.AppDbContextModels;
-using HexagonalArchitecture.Domain.Features.Blog;
-using HexagonalArchitecture.DTOs.Features.Blog;
-using HexagonalArchitecture.DTOs.PageSetting;
-using HexagonalArchitecture.Shared;
-using HexagonalArchitecture.Utils;
-using Microsoft.EntityFrameworkCore;
-
-namespace HexagonalArchitecture.Infrastructure.Features.Blog;
+﻿namespace HexagonalArchitecture.Infrastructure.Features.Blog;
 
 public class BlogAdapter : IBlogPort
 {
