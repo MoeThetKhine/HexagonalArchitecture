@@ -6,7 +6,6 @@ using HexagonalArchitecture.Application.Features.Blog.PatchBlog;
 using HexagonalArchitecture.Application.Features.Blog.UpdateBlog;
 using HexagonalArchitecture.DTOs.Features.Blog;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
 
 namespace HexagonalArchitecture.API.Controllers.Blog;
 
