@@ -1,4 +1,6 @@
-﻿namespace HexagonalArchitecture.Infrastructure.Features.Blog;
+﻿using HexagonalArchitecture.Extensions;
+
+namespace HexagonalArchitecture.Infrastructure.Features.Blog;
 
 public class BlogAdapter : IBlogPort
 {
@@ -9,9 +11,24 @@ public class BlogAdapter : IBlogPort
 		_appDbContext = appDbContext;
 	}
 
-	public Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequest, CancellationToken cancellationToken)
+	public async Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequest, CancellationToken cancellationToken)
 	{
-		throw new NotImplementedException();
+		Result<BlogModel> result;
+
+		try
+		{
+			await _appDbContext.TblBlogs.AddAsync(blogRequest.ToEntity(), cancellationToken);
+			await _appDbContext.SaveChangesAsync(cancellationToken);
+
+			result = Result<BlogModel>.Success();
+		}
+
+		catch (Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+		result:
+		return result;
 	}
 
 	public Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken)
