@@ -1,5 +1,7 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.UpdateBlog;
 
+#region UpdateBlogCommand
+
 public class UpdateBlogCommand : IRequest<Result<BlogModel>>
 {
 	public BlogRequestModel requestModel { get; set; }
@@ -11,3 +13,5 @@ public class UpdateBlogCommand : IRequest<Result<BlogModel>>
 		BlogId = blogId;
 	}
 }
+
+#endregion
