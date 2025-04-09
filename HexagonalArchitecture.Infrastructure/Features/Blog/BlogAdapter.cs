@@ -1,7 +1,4 @@
-﻿using HexagonalArchitecture.Extensions;
-using Microsoft.EntityFrameworkCore;
-
-namespace HexagonalArchitecture.Infrastructure.Features.Blog;
+﻿namespace HexagonalArchitecture.Infrastructure.Features.Blog;
 
 public class BlogAdapter : IBlogPort
 {

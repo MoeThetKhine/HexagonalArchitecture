@@ -5,3 +5,4 @@ global using HexagonalArchitecture.DTOs.PageSetting;
 global using HexagonalArchitecture.Shared;
 global using HexagonalArchitecture.Utils;
 global using Microsoft.EntityFrameworkCore;
+global using HexagonalArchitecture.Extensions;
