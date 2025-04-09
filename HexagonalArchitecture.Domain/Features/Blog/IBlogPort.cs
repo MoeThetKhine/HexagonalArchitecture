@@ -1,5 +1,7 @@
 ﻿namespace HexagonalArchitecture.Domain.Features.Blog;
 
+#region IBlogPort
+
 public interface IBlogPort
 {
 	Task<Result<BlogListModelV1>> GetBlogListAsync(int pageNo, int pageSize,CancellationToken cancellationToken);
@@ -9,3 +11,5 @@ public interface IBlogPort
 	Task<Result<BlogModel>> PatchBlogAsync(int id , BlogRequestModel requestModel, CancellationToken cancellationToken);
 	Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken);
 }
+
+#endregion
