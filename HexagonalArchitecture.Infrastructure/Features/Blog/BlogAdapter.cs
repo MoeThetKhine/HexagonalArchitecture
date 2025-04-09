@@ -11,6 +11,8 @@ public class BlogAdapter : IBlogPort
 		_appDbContext = appDbContext;
 	}
 
+	#region CreateBlogAsync
+
 	public async Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequest, CancellationToken cancellationToken)
 	{
 		Result<BlogModel> result;
@@ -30,6 +32,8 @@ public class BlogAdapter : IBlogPort
 		result:
 		return result;
 	}
+
+	#endregion
 
 	public Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken)
 	{
