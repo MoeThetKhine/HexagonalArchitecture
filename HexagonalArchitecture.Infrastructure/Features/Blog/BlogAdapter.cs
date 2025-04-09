@@ -36,6 +36,7 @@ public class BlogAdapter : IBlogPort
 
 	#endregion
 
+	#region DeleteBlogAsync
 
 	public async Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken)
 	{
@@ -63,6 +64,8 @@ public class BlogAdapter : IBlogPort
 	result:
 		return result;
 	}
+
+	#endregion
 
 	#region GetBlogListAsync
 
