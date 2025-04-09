@@ -127,8 +127,35 @@ public class BlogAdapter : IBlogPort
 		throw new NotImplementedException();
 	}
 
-	public Task<Result<BlogModel>> UpdateBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
+	public async Task<Result<BlogModel>> UpdateBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
 	{
-		throw new NotImplementedException();
+		Result<BlogModel> result;
+
+		try
+		{
+			var blog = await _appDbContext.TblBlogs.FindAsync([id, cancellationToken], cancellationToken: cancellationToken);
+
+			if(blog is null)
+			{
+				result = Result<BlogModel>.NotFound();
+				goto result;
+			}
+
+			blog.BlogTitle = requestModel.BlogTitle;
+			blog.BlogAuthor = requestModel.BlogAuthor;
+			blog.BlogContent = requestModel.BlogContent;
+
+			_appDbContext.TblBlogs.Update(blog);
+			await _appDbContext.SaveChangesAsync(cancellationToken);
+
+			result = Result<BlogModel>.UpdateSuccess();
+		}
+		catch(Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+
+		result:
+		return result;
 	}
 }
