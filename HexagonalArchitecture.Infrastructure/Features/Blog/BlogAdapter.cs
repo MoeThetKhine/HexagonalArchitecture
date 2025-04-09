@@ -17,6 +17,16 @@ public class BlogAdapter : IBlogPort
 		_appDbContext = appDbContext;
 	}
 
+	public Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequest, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
+	}
+
+	public Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
+	}
+
 	public async Task<Result<BlogListModelV1>> GetBlogAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
 	{
 		Result<BlogListModelV1> result;
@@ -55,5 +65,25 @@ public class BlogAdapter : IBlogPort
 		}
 
 		return result;
+	}
+
+	public Task<Result<BlogModel>> GetBlogByIdAsync(int id, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
+	}
+
+	public Task<Result<BlogListModelV1>> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
+	}
+
+	public Task<Result<BlogModel>> PatchBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
+	}
+
+	public Task<Result<BlogModel>> UpdateBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
 	}
 }
