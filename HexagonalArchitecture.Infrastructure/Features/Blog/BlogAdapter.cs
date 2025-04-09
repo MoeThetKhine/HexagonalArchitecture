@@ -19,9 +19,9 @@ public class BlogAdapter : IBlogPort
 		throw new NotImplementedException();
 	}
 
-	#region GetBlogAsync
+	#region GetBlogListAsync
 
-	public async Task<Result<BlogListModelV1>> GetBlogAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
+	public async Task<Result<BlogListModelV1>> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
 	{
 		Result<BlogListModelV1> result;
 
@@ -99,10 +99,7 @@ public class BlogAdapter : IBlogPort
 
 	#endregion
 
-	public Task<Result<BlogListModelV1>> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
-	{
-		throw new NotImplementedException();
-	}
+	
 
 	public Task<Result<BlogModel>> PatchBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
 	{
