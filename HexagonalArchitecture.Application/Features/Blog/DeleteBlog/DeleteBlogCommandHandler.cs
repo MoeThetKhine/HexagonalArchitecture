@@ -1,5 +1,7 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.DeleteBlog;
 
+#region DeleteBlogCommandHandler
+
 public class DeleteBlogCommandHandler : IRequestHandler<DeleteBlogCommand, Result<BlogModel>>
 {
 	private readonly IBlogPort _blogPort;
@@ -25,3 +27,5 @@ public class DeleteBlogCommandHandler : IRequestHandler<DeleteBlogCommand, Resul
 		return result;
 	}
 }
+
+#endregion
