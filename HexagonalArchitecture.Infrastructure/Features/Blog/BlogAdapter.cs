@@ -1,4 +1,5 @@
 ﻿using HexagonalArchitecture.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace HexagonalArchitecture.Infrastructure.Features.Blog;
 
@@ -35,9 +36,32 @@ public class BlogAdapter : IBlogPort
 
 	#endregion
 
-	public Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken)
+
+	public async Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken)
 	{
-		throw new NotImplementedException();
+		Result<BlogModel> result;
+
+		try
+		{
+			var blog = await _appDbContext.TblBlogs.FindAsync([id, cancellationToken], cancellationToken: cancellationToken);
+			if (blog is null)
+			{
+				result = Result<BlogModel>.NotFound();
+				goto result;
+			}
+
+			_appDbContext.TblBlogs.Remove(blog);
+			await _appDbContext.SaveChangesAsync(cancellationToken);
+
+			result = Result<BlogModel>.DeleteSuccess();
+		}
+		catch (Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+
+	result:
+		return result;
 	}
 
 	#region GetBlogListAsync
