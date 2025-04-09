@@ -67,9 +67,36 @@ public class BlogAdapter : IBlogPort
 		return result;
 	}
 
-	public Task<Result<BlogModel>> GetBlogByIdAsync(int id, CancellationToken cancellationToken)
+	public async Task<Result<BlogModel>> GetBlogByIdAsync(int id, CancellationToken cancellationToken)
 	{
-		throw new NotImplementedException();
+		Result<BlogModel> result;
+
+		try
+		{
+			var blog = await _appDbContext.TblBlogs.FindAsync([id, cancellationToken], cancellationToken: cancellationToken);
+
+			if(blog is null)
+			{
+				result = Result<BlogModel>.NotFound();
+				goto result;
+			}
+
+			result = Result<BlogModel>.Success(new BlogModel()
+			{
+				BlogId = blog.BlogId,
+				BlogTitle = blog.BlogTitle,
+				BlogAuthor = blog.BlogAuthor,
+				BlogContent = blog.BlogContent,
+			});
+		}
+
+		catch(Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+
+		result:
+		return result;
 	}
 
 	public Task<Result<BlogListModelV1>> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
