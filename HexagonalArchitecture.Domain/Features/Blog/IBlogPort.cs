@@ -7,4 +7,5 @@ public interface IBlogPort
 	Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequest, CancellationToken cancellationToken);
 	Task<Result<BlogModel>> UpdateBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken);
 	Task<Result<BlogModel>> PatchBlogAsync(int id , BlogRequestModel requestModel, CancellationToken cancellationToken);
+	Task<Result<BlogModel>> DeleteBlogAsync(int id, CancellationToken cancellationToken);
 }
