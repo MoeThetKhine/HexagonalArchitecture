@@ -63,6 +63,8 @@ public class BlogAdapter : IBlogPort
 
 	#endregion
 
+	#region GetBlogByIdAsync
+
 	public async Task<Result<BlogModel>> GetBlogByIdAsync(int id, CancellationToken cancellationToken)
 	{
 		Result<BlogModel> result;
@@ -94,6 +96,8 @@ public class BlogAdapter : IBlogPort
 		result:
 		return result;
 	}
+
+	#endregion
 
 	public Task<Result<BlogListModelV1>> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
 	{
