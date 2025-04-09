@@ -1,5 +1,7 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.PatchBlog;
 
+#region PatchBlogCommandHandler
+
 public class PatchBlogCommandHandler : IRequestHandler<PatchBlogCommand, Result<BlogModel>>
 {
 	private readonly IBlogPort _blogPort;
@@ -30,3 +32,5 @@ public class PatchBlogCommandHandler : IRequestHandler<PatchBlogCommand, Result<
 	#endregion
 
 }
+
+#endregion
