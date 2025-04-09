@@ -11,6 +11,7 @@ public class GetBlogListQueryHandler : IRequestHandler<GetBlogListQuery, Result<
 		_blogPort = blogPort;
 	}
 
+	#region Handle
 
 	public async Task<Result<BlogListModelV1>> Handle(GetBlogListQuery request, CancellationToken cancellationToken)
 	{
@@ -41,5 +42,6 @@ public class GetBlogListQueryHandler : IRequestHandler<GetBlogListQuery, Result<
 		return result;
 	}
 
+	#endregion
 
 }
