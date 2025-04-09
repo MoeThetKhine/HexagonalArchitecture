@@ -9,6 +9,7 @@ public class PatchBlogCommandHandler : IRequestHandler<PatchBlogCommand, Result<
 		_blogPort = blogPort;
 	}
 
+	#region Handle
 
 	public async Task<Result<BlogModel>> Handle(PatchBlogCommand request, CancellationToken cancellationToken)
 	{
@@ -26,5 +27,6 @@ public class PatchBlogCommandHandler : IRequestHandler<PatchBlogCommand, Result<
 		return result;
 	}
 
+	#endregion
 
 }
