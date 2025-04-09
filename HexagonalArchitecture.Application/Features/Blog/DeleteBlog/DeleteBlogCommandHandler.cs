@@ -11,6 +11,8 @@ public class DeleteBlogCommandHandler : IRequestHandler<DeleteBlogCommand, Resul
 		_blogPort = blogPort;
 	}
 
+	#region Handle
+
 	public async Task<Result<BlogModel>> Handle(DeleteBlogCommand request, CancellationToken cancellationToken)
 	{
 		Result<BlogModel> result;
@@ -26,6 +28,8 @@ public class DeleteBlogCommandHandler : IRequestHandler<DeleteBlogCommand, Resul
 		result:
 		return result;
 	}
+
+	#endregion
 }
 
 #endregion
