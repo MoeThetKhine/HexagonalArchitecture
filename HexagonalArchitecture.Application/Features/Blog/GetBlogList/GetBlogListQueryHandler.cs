@@ -1,6 +1,4 @@
-﻿using HexagonalArchitecture.Domain.Features.Blog;
-
-namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
+﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
 
 #region GetBlogListQueryHandler
 
