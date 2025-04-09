@@ -1,13 +1,4 @@
-﻿using HexagonalArchitecture.Application.Features.Blog.CreateBlog;
-using HexagonalArchitecture.Application.Features.Blog.DeleteBlog;
-using HexagonalArchitecture.Application.Features.Blog.GetBlogById;
-using HexagonalArchitecture.Application.Features.Blog.GetBlogList;
-using HexagonalArchitecture.Application.Features.Blog.PatchBlog;
-using HexagonalArchitecture.Application.Features.Blog.UpdateBlog;
-using HexagonalArchitecture.DTOs.Features.Blog;
-using MediatR;
-
-namespace HexagonalArchitecture.API.Controllers.Blog;
+﻿namespace HexagonalArchitecture.API.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
