@@ -1,6 +1,6 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.CreateBlog;
 
-
+#region CreateBlogCommand
 
 public class CreateBlogCommand : IRequest<Result<BlogModel>>
 {
@@ -11,3 +11,5 @@ public class CreateBlogCommand : IRequest<Result<BlogModel>>
 		this.requestModel = requestModel;
 	}
 }
+
+#endregion
