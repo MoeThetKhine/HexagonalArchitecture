@@ -120,11 +120,48 @@ public class BlogAdapter : IBlogPort
 
 	#endregion
 
-	
-
-	public Task<Result<BlogModel>> PatchBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
+	public async Task<Result<BlogModel>> PatchBlogAsync(int id, BlogRequestModel requestModel, CancellationToken cancellationToken)
 	{
-		throw new NotImplementedException();
+		Result<BlogModel> result;
+
+		try
+		{
+			var blog = await _appDbContext.TblBlogs.FindAsync([id, cancellationToken], cancellationToken: cancellationToken);
+
+			if(blog is null)
+			{
+				result = Result<BlogModel>.NotFound();
+				goto result;
+			}
+
+			if (!requestModel.BlogTitle.IsNullOrEmpty())
+			{
+				blog.BlogTitle = requestModel.BlogTitle;
+			}
+
+			if (!requestModel.BlogAuthor.IsNullOrEmpty())
+			{
+				blog.BlogAuthor = requestModel.BlogAuthor;
+			}
+
+			if (!requestModel.BlogContent.IsNullOrEmpty())
+			{
+				blog.BlogContent = requestModel.BlogContent;
+			}
+
+			_appDbContext.TblBlogs.Update(blog);
+			await _appDbContext.SaveChangesAsync(cancellationToken);
+
+			result = Result<BlogModel>.UpdateSuccess();
+		}
+		catch(Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+
+		result:
+		return result;
+
 	}
 
 	#region UpdateBlogAsync
