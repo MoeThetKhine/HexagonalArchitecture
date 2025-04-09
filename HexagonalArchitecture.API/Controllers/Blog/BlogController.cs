@@ -1,4 +1,5 @@
-﻿using HexagonalArchitecture.Application.Features.Blog.GetBlogList;
+﻿using HexagonalArchitecture.Application.Features.Blog.GetBlogById;
+using HexagonalArchitecture.Application.Features.Blog.GetBlogList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,14 @@ public class BlogController : BaseController
 		var query = new GetBlogListQuery(pageNo, pageSize);
 		var result = await _mediator.Send(query, cancellationToken);
 
+		return Content(result);
+	}
+
+	[HttpGet("{id}")]
+	public async Task<IActionResult> GetBlogByIdAsync(int id, CancellationToken cancellationToken)
+	{
+		var query = new GetBlogByIdQuery(id);
+		var result = await _mediator.Send(query, cancellationToken);
 		return Content(result);
 	}
 }
