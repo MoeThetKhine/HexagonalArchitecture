@@ -1,8 +1,4 @@
-﻿using HexagonalArchitecture.DTOs.Features.Blog;
-using HexagonalArchitecture.Utils;
-using MediatR;
-
-namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
+﻿namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
 
 #region GetBlogListQuery
 
