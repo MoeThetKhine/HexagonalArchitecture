@@ -2,6 +2,8 @@
 
 namespace HexagonalArchitecture.Application.Features.Blog.GetBlogList;
 
+#region GetBlogListQueryHandler
+
 public class GetBlogListQueryHandler : IRequestHandler<GetBlogListQuery, Result<BlogListModelV1>>
 {
 	private readonly IBlogPort _blogPort;
@@ -45,3 +47,5 @@ public class GetBlogListQueryHandler : IRequestHandler<GetBlogListQuery, Result<
 	#endregion
 
 }
+
+#endregion
