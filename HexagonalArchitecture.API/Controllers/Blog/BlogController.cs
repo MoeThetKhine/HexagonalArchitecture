@@ -1,5 +1,7 @@
-﻿using HexagonalArchitecture.Application.Features.Blog.GetBlogById;
+﻿using HexagonalArchitecture.Application.Features.Blog.CreateBlog;
+using HexagonalArchitecture.Application.Features.Blog.GetBlogById;
 using HexagonalArchitecture.Application.Features.Blog.GetBlogList;
+using HexagonalArchitecture.DTOs.Features.Blog;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,4 +34,14 @@ public class BlogController : BaseController
 		var result = await _mediator.Send(query, cancellationToken);
 		return Content(result);
 	}
+
+	[HttpPost]
+	public async Task<IActionResult> CreateBlogAsync([FromBody] BlogRequestModel requestModel, CancellationToken cancellationToken)
+	{
+		var command = new CreateBlogCommand(requestModel);
+		var result = await _mediator.Send(command, cancellationToken);
+
+		return Content(result);
+	}
+
 }
