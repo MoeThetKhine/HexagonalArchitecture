@@ -19,6 +19,8 @@ public class BlogAdapter : IBlogPort
 		throw new NotImplementedException();
 	}
 
+	#region GetBlogAsync
+
 	public async Task<Result<BlogListModelV1>> GetBlogAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
 	{
 		Result<BlogListModelV1> result;
@@ -58,6 +60,8 @@ public class BlogAdapter : IBlogPort
 
 		return result;
 	}
+
+	#endregion
 
 	public async Task<Result<BlogModel>> GetBlogByIdAsync(int id, CancellationToken cancellationToken)
 	{
