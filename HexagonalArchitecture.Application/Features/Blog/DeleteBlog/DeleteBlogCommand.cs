@@ -1,5 +1,7 @@
 ﻿namespace HexagonalArchitecture.Application.Features.Blog.DeleteBlog;
 
+#region DeleteBlogCommand
+
 public class DeleteBlogCommand : IRequest<Result<BlogModel>>
 {
 	public int BlogId {  get; set; }
@@ -9,3 +11,5 @@ public class DeleteBlogCommand : IRequest<Result<BlogModel>>
 		BlogId = blogId;
 	}
 }
+
+#endregion
