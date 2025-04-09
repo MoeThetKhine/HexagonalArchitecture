@@ -1,4 +1,5 @@
 ﻿using HexagonalArchitecture.Application.Features.Blog.CreateBlog;
+using HexagonalArchitecture.Application.Features.Blog.DeleteBlog;
 using HexagonalArchitecture.Application.Features.Blog.GetBlogById;
 using HexagonalArchitecture.Application.Features.Blog.GetBlogList;
 using HexagonalArchitecture.Application.Features.Blog.PatchBlog;
@@ -63,4 +64,11 @@ public class BlogController : BaseController
 		return Content(result);
 	}
 
+	[HttpDelete("{id}")]
+	public async Task<IActionResult> DeleteBlogAsync(int id, CancellationToken cancellationToken)
+	{
+		var command = new DeleteBlogCommand(id);
+		var result = await _mediator.Send(command, cancellationToken);
+		return Content(result);
+	}
 }
