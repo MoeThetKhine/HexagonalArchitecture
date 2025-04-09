@@ -1,5 +1,4 @@
-﻿using HexagonalArchitecture.Shared;
-
+﻿
 namespace HexagonalArchitecture.Application.Features.Blog.CreateBlog;
 
 #region CreateBlogCommandHandler

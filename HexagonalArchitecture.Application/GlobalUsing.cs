@@ -2,3 +2,4 @@
 global using HexagonalArchitecture.Utils;
 global using MediatR;
 global using HexagonalArchitecture.Domain.Features.Blog;
+global using HexagonalArchitecture.Shared;
